@@ -12,6 +12,22 @@ function stringMasLarga(strings) {
   // stringMasLarga(['JavaScript', 'HTML', 'CSS']); debe retornar 'JavaScript'
 
   // Tu código aca
+
+  let nuevoArray = [];
+  let stringMayorNumero;
+  let palabraMasGrande;
+  strings.forEach( element => {
+    nuevoArray.push(element.length);
+  });
+  stringMayorNumero = (Math.max(...nuevoArray));
+  strings.forEach( element => {
+    if( element.length === stringMayorNumero) {
+      palabraMasGrande = element;
+      console.log(palabraMasGrande)
+    }
+  })
+
+  return palabraMasGrande;
 }
 
 // No modifiques nada debajo de esta linea //
